@@ -1,0 +1,195 @@
+* { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+} 
+body { 
+    background-color: rgb(0, 0, 0); 
+    position: relative; 
+    /* display: flex; */
+} 
+.allboxs{
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.boxes { 
+    width: 100%; 
+    /* height: 100vh;  */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px; 
+    gap: 20px; 
+    flex-wrap: wrap;
+} 
+.box { 
+    
+    /* flex: 33%;  */
+    width:28%;
+    height: 300px; 
+    /* border: 1px solid black;  */
+    cursor: pointer; 
+    >img{
+        width: 100%;
+        height: 100%;
+    }
+} 
+.display { 
+    width: 100%; 
+    height: 100vh; 
+    /* background: #fff;  */
+    /* background: url(img/aerosmith.jpg); */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    display: none; 
+    /* border: 1px solid blue; */
+     overflow: hidden;
+} 
+.show-display { 
+    display: flex; 
+} 
+.display-wrapper { 
+    width: 600px; 
+    border: 1px solid black; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50% , -50%); 
+    padding: 20px; 
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    /* position: relative; */
+    background-color: #f8efcbb5;
+    overflow: hidden;
+    opacity: 0.7;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    
+    >div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        /* position: absolute; */
+        /* z-index: 999; */
+        /* border: 1px solid red; */
+        width: 80%;
+        left: 0;
+    }
+} 
+.display-wrapper > div > h2 { 
+    margin-bottom: 20px; 
+} 
+.display-wrapper > div > p { 
+    text-align: center; 
+    color: #000000; 
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.audioicons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    width: 100%;
+    gap: 30px;
+    >span{
+        >i{
+            font-size: 23px;
+    background-color: aqua;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+       
+        }
+    }
+}
+
+.playButton{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+
+.audio{
+    display: none;
+}
+
+.svg{
+    
+    >img{
+        width: 250px;
+        height: 250px;
+        /* transform: translateX(200px); */
+        /* position: absolute; */
+        /* z-index: -1; */
+    }
+
+}
+
+@keyframes svganimation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animation{
+    animation: svganimation linear infinite 4s;
+
+}
+.bg{
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: center;
+}
+
+.sidbar{
+    position: absolute;
+            right:0;
+            top: 0;
+            bottom: 0;
+            width: 25%;
+            height: 100vh;
+            background-color: rgb(23, 23, 23);
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            
+            >p{
+                font-size: 40px;
+                margin-top: 20px;
+                color: #fff;
+            }
+}
+
+.return{
+    /* border: 1px solid white; */
+    color: white;
+     padding: 20px;
+     cursor: pointer;
+     height: 40px;
+     color: rgb(255, 115, 0);
+    >i{
+        font-size: 50px;
+    }
+}
